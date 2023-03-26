@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --cor-primaria: rgb(17, 86, 102);
-    --cor-primaria-escura: rgb(9, 48, 56);
+    --cor-primaria: #BFB4F7;
+    --cor-primaria-escura: #6653C2;
+    --cor-fonte: #5B5675;
 }
 
 * {
@@ -13,46 +14,76 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--cor-primaria);
-    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(to top, #BFB4F7, #6653C2);
+    font-family: 'Roboto';
     font-size: 1.3em;
     line-height: 1.5em;
-
+    color: var(--cor-fonte);  
 }
 h1 {
-    color: var(--cor-primaria-escura);
+    text-align: center;
 }
 
 .container {
-    max-width: 640px;
-    margin: 50px auto;
+    position: relative;
+    top: 5%;
+    max-width: 500px;
+    margin: 0px auto;
     background: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.521);
+}
 
+div {
+    display: flex;
+    
 }
 
 .input-tarefa {
-    width: 300px;
-    padding: 9px;
+    width: 73%;
+    padding: 9px 15px;
+    background-color: #5b56751f;
+    border: 0 none;
     border-width: 1.8px;
     border-radius: 5px;
+    font-size: 1.1em;
 }
 
-.btn-tarefa, .apagar{
+.btn-tarefa {
     color: white;
-    background-color: var(--cor-primaria);
-    border: none;
+    background-color: #8169F5;
+    border: 0 none;
     border-radius: 5px;
     padding: 10px;
     font-weight: bold;
     margin-left: 10px;
+    cursor: pointer;
 }
 
-.btn-tarefa:hover, .apagar:hover {
+.btn-tarefa:hover {
     transition: 300ms;
     color: white;
     background-color: var(--cor-primaria-escura);
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.apagar {
+    border: none;
+    background-color: #fff;
+    text-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.466);
+    color: #ff453c;
+    font-weight: bolder;
+    font-size: 1.1em;
+    padding-left: 10px;
+    cursor: pointer;
+
+}
+
+.apagar:hover {
+    transition: all 100ms ease-in-out;
+    transform: scale(1.05);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.466);
+
 }

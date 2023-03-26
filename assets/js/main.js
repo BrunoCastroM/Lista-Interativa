@@ -22,7 +22,7 @@ function limpaInput() {
 function criaBotaoApagar(li) {
   li.innerText += ' ';
   const botaoApagar = document.createElement('button');
-  botaoApagar.innerText = 'Apagar';
+  botaoApagar.innerHTML = 'x';
   // botaoApagar.classList.add('apagar');
   botaoApagar.setAttribute('class', 'apagar');
   botaoApagar.setAttribute('title', 'Apagar esta tarefa');
@@ -58,7 +58,7 @@ function salvarTarefas() {
 
   for (let tarefa of liTarefas) {
     let tarefaTexto = tarefa.innerText;
-    tarefaTexto = tarefaTexto.replace('Apagar', '').trim();
+    tarefaTexto = tarefaTexto.replace('x', '').trim();
     listaDeTarefas.push(tarefaTexto);
   }
 
